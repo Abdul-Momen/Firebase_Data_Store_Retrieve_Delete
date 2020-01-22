@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1068663061796",
+    "firebase_url": "https://firbase-data-store-retrieve.firebaseio.com",
+    "project_id": "firbase-data-store-retrieve",
+    "storage_bucket": "firbase-data-store-retrieve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068663061796:android:4850b4225f81b0a01447b1",
+        "android_client_info": {
+          "package_name": "com.momen.firebasedatastoreretrievedelete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068663061796-tomplgsjdiqn5g2106jl6uqlk95vv84f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.momen.firebasedatastoreretrievedelete",
+            "certificate_hash": "1447336aed0e4ae1ff13b49efb6aaf5ee3942104"
+          }
+        },
+        {
+          "client_id": "1068663061796-jq5glfe4gn2hg9uujc0955bu6pffvsed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkZkESGDq3jiNFuGZdmzahCQNmH2mZm2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068663061796-jq5glfe4gn2hg9uujc0955bu6pffvsed.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
