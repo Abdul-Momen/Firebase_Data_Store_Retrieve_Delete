@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private EditText imageNameEt;
     private ProgressBar progressBar;
     private Uri imageUri;
+    DatabaseReference databaseReference;
+    StorageReference storageReference;
 
     private  static  final  int IMAGE_REQUEST = 1;
 
@@ -47,6 +51,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     }
 
+
+
+
     @Override
     public void onClick(View v) {
 
@@ -54,7 +61,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             case  R.id.chose_btn_id:
 
                 openFilechosser();
-
 
             break;
 
@@ -69,12 +75,15 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     }
 
- void openFilechosser() {
 
-     Intent intent= new Intent();
-     intent.setType("image/*");
-     intent.setAction(Intent.ACTION_GET_CONTENT);
-      startActivityForResult(intent,IMAGE_REQUEST);
+
+   //file choose
+    void openFilechosser() {
+
+        Intent intent= new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent,IMAGE_REQUEST);
 
     }
 
@@ -85,7 +94,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         if(requestCode==IMAGE_REQUEST&&resultCode==RESULT_OK && data!=null && data.getData()!=null)
         {
             imageUri= data.getData();
-          Picasso.get().load(imageUri).into(imageView);
+            Picasso.get().load(imageUri).into(imageView);
         }
     }
+
+
+
+
+
+
+
 }
